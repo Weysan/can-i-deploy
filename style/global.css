@@ -108,6 +108,9 @@ a.github-button:hover {
     vertical-align: middle;
     margin-bottom: 60px;
 }
+.deploy-result {
+	text-align: center;
+}
 
 @media only screen and (max-width: 768px){
 	a.wp, a.drupal, a.preprod, a.prod, a.github-button {
@@ -134,5 +137,7 @@ a.github-button:hover {
 		right: auto;
 		top: auto;
 		height: auto;
+		min-height: auto;
+		margin-bottom: 0;
 	}
 }
