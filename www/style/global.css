@@ -1,0 +1,92 @@
+.none {
+	display:none;
+}
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+
+a.wp, a.drupal, a.preprod, a.prod {
+	border: 1px solid #ddd;
+	opacity: 0.5;
+	border-radius: 5px;
+	display: inline-block;
+	width: 25%;
+	height: 150px;
+	background-size: 120px 120px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-indent: -5000px;
+	margin-left: 12.5%;
+}
+
+a.preprod, a.prod {
+	text-indent: inherit;
+	text-align: center;
+	font-size: 30px;
+	color: #ccc;
+	font-weight: bold;
+	padding-top: 50px;
+}
+a.wp:hover, a.drupal:hover, a.preprod:hover, a.prod:hover {
+	opacity: 1;
+	cursor: pointer;
+	text-decoration: none;
+}
+a.wp {
+	background-image: url(../pics/logo_wp.png);
+}
+a.drupal {
+	background-image: url(../pics/logo_drupal.gif);
+}
+h2, strong {
+	color: #047abb;
+	font-size: 20px;
+}
+.question-box {
+	text-align: center;
+	font-size: 30px;
+}
+.question-box p.question-text {
+	color: #047abb;
+}
+.question-box label {
+	margin: 0 15% 0 15px;
+}
+.question-box label:last-child {
+	margin-right: 0;
+}
+.question-box div#help {
+	border: 1px solid #eee;
+	text-align: left;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 5px;
+	border-radius: 10px;
+}
+.question-box div#help h3 {
+	color: #ccc;
+	font-weight: bold;
+}
+p.back-to-home {
+	font-size: 15px;
+}
+div.choicePlatform, div.choiceEnvironment {
+	padding-top: 150px;
+}
+
+
+@media only screen and (max-width: 768px){
+	a.wp, a.drupal, a.preprod, a.prod {
+		display:block;
+		width: 90%;
+		margin: 20px 5%;
+		opacity: 1;
+	}
+	div.choicePlatform, div.choiceEnvironment {
+		padding-top: inherit;
+	}
+}
