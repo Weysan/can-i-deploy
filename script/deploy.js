@@ -127,6 +127,12 @@ var ChecklistForm = React.createClass({
   componentDidMount: function() {
     this.loadQuestionsFromServer();
   },
+  twitterWjs: function(){
+    console.log('twitter JS');
+    var funcWjs = !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    return(funcWjs);
+  },
   //affichage de l'aide
   displayHelp: function(){
     this.setState({displayHelp: 'block'});
@@ -141,6 +147,7 @@ var ChecklistForm = React.createClass({
       return true;
   },
   render: function() {
+    
     if(this.state.data[this.state.count]){
       return(
           <div className="question-box">
@@ -163,16 +170,21 @@ var ChecklistForm = React.createClass({
       var stDate=now.getDay()
       
       var result_deploy = 'You can deploy !';
+      var result_deploy_twitter = 'I can deploy my app !';
 
       if(stDate == 5){
         result_deploy = 'You could deploy, but it\'s friday !';
+        result_deploy_twitter = 'I can deploy my app, but it\'s friday !';
       }
-
+      this.twitterWjs();
       return(
           <div className="deploy-result">
             <h1>{result_deploy}</h1>
             <p className="back-to-home">
               <a href="/">Back to home</a>
+            </p>
+            <p className="tweet-it">
+              <a href="https://twitter.com/share" className="twitter-share-button" data-text={result_deploy_twitter} data-hashtags="can-i-deploy">Tweet</a>
             </p>
           </div>
         );

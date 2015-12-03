@@ -7,6 +7,13 @@
 .inline-block {
 	display: inline-block;
 }
+a{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
 
 a.wp, a.drupal, a.preprod, a.prod {
 	border: 1px solid #ddd;
@@ -75,18 +82,57 @@ p.back-to-home {
 	font-size: 15px;
 }
 div.choicePlatform, div.choiceEnvironment {
-	padding-top: 150px;
+	/*padding-top: 150px;*/
+}
+a.github-button{
+	display: block;
+	margin: 0 auto;
+	height: 32px;
+	width: 32px;
+	background: url(../pics/github.png) no-repeat center center;
+	overflow: hidden;
+	text-indent: -5000px;
+	opacity: 0.4;
+	position: absolute;
+    bottom: 20px;
+    left: calc(50% - 16px);
+}
+a.github-button:hover {
+	opacity: 0.8;
+}
+#content {
+	position: absolute;
+    left: calc(50% - 585px);
+    top: calc(50% - 150px);
+    min-height: 300px;
+    vertical-align: middle;
+    margin-bottom: 60px;
 }
 
-
 @media only screen and (max-width: 768px){
-	a.wp, a.drupal, a.preprod, a.prod {
+	a.wp, a.drupal, a.preprod, a.prod, a.github-button {
 		display:block;
 		width: 90%;
 		margin: 20px 5%;
 		opacity: 1;
+		position: relative;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		top: auto;
+	}
+	a.github-button{
+		opacity: 0.8;
 	}
 	div.choicePlatform, div.choiceEnvironment {
 		padding-top: inherit;
+	}
+	#content {
+		position: relative;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		top: auto;
+		height: auto;
 	}
 }
