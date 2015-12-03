@@ -6,7 +6,10 @@ $return = [
 			],
 			[
 				'question' => 'Is wp_config.php protected in your .htaccess file?',
-				'aide' => '<p>Add this to your <em>.htaccess</em> file</p><p><em>Code Here</em></p>'
+				'aide' => '<p>Add this to your <em>.htaccess</em> file</p><pre>&lsaquo;files wp-config.php&rsaquo;
+order allow,deny
+deny from all
+&lsaquo;/files&rsaquo;</pre>'
 			],
 			[
 				'question' => 'Have you enabled the Google\'s crawling in the backoffice?',
@@ -18,11 +21,11 @@ $return = [
 			],
 			[
 				'question' => 'Have you removed the Wordpress version in CMS\' meta tags ?',
-				'aide' => '<p>Add this to your <em>function.php</em> file :</p><p><em>remove_action(\'wp_head\', \'wp_generator\');</em></p>'
+				'aide' => '<p>Add this to your <em>function.php</em> file :</p><p><pre>remove_action(\'wp_head\', \'wp_generator\');</pre></p>'
 			],
 			[
 				'question' => 'Have you disabled the theme Editor ?',
-				'aide' => '<p>Add this to your <em>function.php</em> file :</p><p><em>define( \'DISALLOW_FILE_EDIT\', true );</em></p>'
+				'aide' => '<p>Add this to your <em>function.php</em> file :</p><p><pre>define( \'DISALLOW_FILE_EDIT\', true );</pre></p>'
 			],
 			[
 				'question' => 'Have you disabled comments (if necessary) ?',
@@ -34,7 +37,7 @@ $return = [
 			],
 			[
 				'question' => 'Have you disabled the auto-update (if necessary) ?',
-				'aide' => '<p>Add this to your <em>wp_config.php</em> file :</p><p><em>define( \'WP_AUTO_UPDATE_CORE\', false );</em></p>'
+				'aide' => '<p>Add this to your <em>wp_config.php</em> file :</p><p><pre>define( \'WP_AUTO_UPDATE_CORE\', false );</pre></p>'
 			],
 			[
 				'question' => 'Have you enabled a cookie notice plugin ?',
