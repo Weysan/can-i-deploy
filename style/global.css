@@ -27,7 +27,7 @@ a.wp, a.drupal, a.preprod, a.prod {
 	background-repeat: no-repeat;
 	overflow: hidden;
 	text-indent: -5000px;
-	margin-left: 12.5%;
+	margin-left: 17%;
 }
 
 a.preprod, a.prod {
@@ -84,6 +84,13 @@ p.back-to-home {
 div.choicePlatform, div.choiceEnvironment {
 	/*padding-top: 150px;*/
 }
+.open-source-project-links {
+	display: block;
+	width: 100%;
+	position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
 a.github-button{
 	display: block;
 	margin: 0 auto;
@@ -93,9 +100,7 @@ a.github-button{
 	overflow: hidden;
 	text-indent: -5000px;
 	opacity: 0.4;
-	position: absolute;
-    bottom: 20px;
-    left: calc(50% - 16px);
+	margin-bottom: 20px;
 }
 a.github-button:hover {
 	opacity: 0.8;
@@ -111,7 +116,14 @@ a.github-button:hover {
 .deploy-result {
 	text-align: center;
 }
-
+h1.container {
+	text-align: center;
+    padding-top: 7%;
+    font-size: 5em;
+}
+.no-display{
+	display:none;
+}
 @media only screen and (max-width: 768px){
 	a.wp, a.drupal, a.preprod, a.prod, a.github-button {
 		display:block;

@@ -33,7 +33,7 @@ var PlatformChoice = React.createClass({
       } else {
         return (
           <div className="choicePlatform">
-            <h2>Choose your CMS</h2>
+            <h2 className='no-display'>Choose your CMS</h2>
             {this.props.items.map(function(item, i) {
               return (
                 <a className={item.class} key={i} onClick={this.handleChoice.bind(this, item.class)}>
@@ -74,7 +74,7 @@ var EnvironmentChoice = React.createClass({
     } else {
         return (
           <div className="choiceEnvironment">
-            <h2>Choose your Environment</h2>
+            <h2 className='no-display'>Choose your Environment</h2>
             <a className="preprod" onClick={this.handleChoice.bind(this, 'preprod')}>
               Preproduction
             </a>
