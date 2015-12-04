@@ -152,4 +152,7 @@ h1.container {
 		min-height: auto;
 		margin-bottom: 0;
 	}
+	h1.container{
+		font-size: 3em;
+	}
 }
